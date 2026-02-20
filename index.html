@@ -25,36 +25,15 @@ blah, blah, blah, blah
 https://www.w3schools.com/w3css/default.asp
 https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-file
 -->
-	
-   <head> 
-      <title>Hello World</title>  
+
+	<head>
+      <title>Cold or Allergy?</title> <!--changed title--> 
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="apple-mobile-web-app-capable" content="yes">
       <link rel="stylesheet" href="w3.css">
       <link rel="stylesheet" href="w3-colors-flat.css">
-   </head> 
 
-
-<script>
-        var allergy_count = 0;
-        var cold_count = 0;
-
-
-        function allergyAdd(){
-            allergy_count = allergy_count + 1;
-		alert(allergy_count);
-
-        }
-
-        function coldAdd(){
-            cold_count = cold_count + 1;
-        }
-
-  </script>
-
-
-
-<style>	
+	  <style>	
 .body {
      margin: 0em;
 }
@@ -75,6 +54,37 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
     z-index: 1;
 }
 </style>
+
+
+<script>
+        var allergy_count = 0;
+        var cold_count = 0;
+
+
+        function allergyAdd(){
+            allergy_count = allergy_count + 1;
+		
+        }
+
+        function coldAdd(){
+            cold_count = cold_count + 1;
+        }
+		function showResult() {
+		//display final results
+			var total = 6;
+		//calculate what percent goes to allergy
+			var allergyPercent = Math.round((allergy_count / total) * 100); 
+		//calculate what percent goes to cold
+			var coldPercent = Math.round((cold_count / total) * 100);
+		//results page with answer-->
+			var resultText = document.getElementById("results");
+			resultText.innerHTML = "Probability it is allergies = " + allergyPercent + "%" + 
+								"<br> Probability it is a cold - " + coldPercent + "%";
+	}
+	</script>
+
+</head>
+	
 
 <body>
 <div id="header" class="w3-container w3-flat-carrot">
@@ -97,19 +107,88 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div>
 	
     	<div id="content" class="w3-container">
-        <p>Put Question 1 content here.</p>    
+		<!--changed question 1 content-->	
+        <p>Are your eyes watery or itchy?</p>
+		<!--added yes or no button-->
+		<a href="#two" onclick="allergyAdd();" class="w3-btn w3-black">Yes</a>
+		<a href="#two" onclick="coldAdd();" class="w3-btn w3-black">No</a>
     	</div>
 </div>
 
 <div class="page" id="two">
 	<div class="w3-container w3-flat-carrot">
-		<h1>Question 2</h1>
+		<h1>Question 2</h1> <!--change to #2-->
 	</div>
-	
 	<div id="content" class="w3-container">
-		<p>Content of page 2 goes here.</p>
+		<!--changed content of question 2-->
+		<p>Do you have a fever?</p>
+		<!--added yes or no button-->
+		<a href="#three" onclick="coldAdd();" class="w3-btn w3-black">Yes</a>
+		<a href="#three" onclick="allergyAdd();" class="w3-btn w3-black">No</a>
+		</div>
+</div>	
+
+<div class="page" id="three">
+	<div class="w3-container w3-flat-carrot">
+		<h1>Question 3</h1> <!--change to #3-->
+	</div>
+	<div id="content" class="w3-container">
+		<!--changed content of question 3-->
+		<p>Do you have a sore throat?</p>
+		<!--added yes or no button-->
+		<a href="#four" onclick="coldAdd();" class="w3-btn w3-black">Yes</a>
+		<a href="#four" onclick="allergyAdd();" class="w3-btn w3-black">No</a>
 	</div>
 </div>	
+
+<div class="page" id="four">
+	<div class="w3-container w3-flat-carrot">
+		<h1>Question 4</h1> <!--change to #4-->
+	</div>
+	<div id="content" class="w3-container">
+		<!--changed content of question 4-->
+		<p>Are your symptoms seasonal or chronic?</p>
+		<!--added yes or no button-->
+		<a href="#five" onclick="allergyAdd();" class="w3-btn w3-black">Yes</a>
+		<a href="#five" onclick="coldAdd();" class="w3-btn w3-black">No</a>
+	</div>
+</div>
+
+<div class="page" id="five">
+	<div class="w3-container w3-flat-carrot">
+		<h1>Question 5</h1> <!--change to #5-->
+	</div>
+	<div id="content" class="w3-container">
+		<!--changed content of question 5-->
+		<p>Are your sneezes continuous?</p>
+		<!--added yes or no button-->
+		<a href="#six" onclick="allergyAdd();" class="w3-btn w3-black">Yes</a>
+		<a href="#six" onclick="coldAdd();" class="w3-btn w3-black">No</a>
+	</div>
+</div>
+
+<div class="page" id="six">
+	<div class="w3-container w3-flat-carrot">
+		<h1>Question 6</h1> <!--change to #6-->
+	</div>
+	<div id="content" class="w3-container">
+		<!--changed content of question 6-->
+		<p>Is your body sore or tired?</p>
+		<!--added show results button-->
+		<a href="#results" onclick="coldAdd(); showResult();" class="w3-btn w3-black">Yes</a>
+		<a href="#results" onclick="allergyAdd(); showResult();" class="w3-btn w3-black">No</a>
+	</div>
+</div>
+
+<div class="page" id="results">
+	<div class="w3-container w3-flat-carrot">
+		<h1>Results</h1> <!--results page-->
+	</div>
+	<div class="w3-container">
+		<!--show the results-->
+		<p id="results"></p>
+	</div>
+</div>
 
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
