@@ -27,7 +27,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 -->
 
 	<head>
-      <title>Cold or Allergy?</title> <!--changed title--> 
+	<!--changed title-->
+      <title>Cold or Allergy?</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="apple-mobile-web-app-capable" content="yes">
       <link rel="stylesheet" href="w3.css">
@@ -57,26 +58,29 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 
 <script>
-        var allergy_count = 0;
+        //start at 0 then go up by 1 when user answers
+		var allergy_count = 0;
         var cold_count = 0;
 
 
-        function allergyAdd(){
+        //runs when a user chooses an answer that aims toward allergy
+		function allergyAdd(){
             allergy_count = allergy_count + 1;
 		
         }
 
-        function coldAdd(){
+        //runs when a user chooses an answer that aims toward cold
+		function coldAdd(){
             cold_count = cold_count + 1;
         }
 		function showResult() {
-		//display final results
+		//total questions is 6
 			var total = 6;
 		//calculate what percent goes to allergy
 			var allergyPercent = Math.round((allergy_count / total) * 100); 
 		//calculate what percent goes to cold
 			var coldPercent = Math.round((cold_count / total) * 100);
-		//results page with answer-->
+		//results page with answer
 			var resultText = document.getElementById("results");
 			resultText.innerHTML = "Probability it is allergies = " + allergyPercent + "%" + 
 								"<br> Probability it is a cold - " + coldPercent + "%";
@@ -117,7 +121,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 <div class="page" id="two">
 	<div class="w3-container w3-flat-carrot">
-		<h1>Question 2</h1> <!--change to #2-->
+		<!--change to #2-->
+		<h1>Question 2</h1> 
 	</div>
 	<div id="content" class="w3-container">
 		<!--changed content of question 2-->
@@ -128,9 +133,11 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		</div>
 </div>	
 
+<!--added coding for third question-->
 <div class="page" id="three">
 	<div class="w3-container w3-flat-carrot">
-		<h1>Question 3</h1> <!--change to #3-->
+		<!--change to #3-->
+		<h1>Question 3</h1> 
 	</div>
 	<div id="content" class="w3-container">
 		<!--changed content of question 3-->
@@ -141,9 +148,11 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div>
 </div>	
 
+<!--added coding for fourth question-->	
 <div class="page" id="four">
 	<div class="w3-container w3-flat-carrot">
-		<h1>Question 4</h1> <!--change to #4-->
+		<!--change to #4-->
+		<h1>Question 4</h1> 
 	</div>
 	<div id="content" class="w3-container">
 		<!--changed content of question 4-->
@@ -154,9 +163,11 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div>
 </div>
 
+<!--added coding for fifth question-->
 <div class="page" id="five">
 	<div class="w3-container w3-flat-carrot">
-		<h1>Question 5</h1> <!--change to #5-->
+		<!--change to #5-->
+		<h1>Question 5</h1> 
 	</div>
 	<div id="content" class="w3-container">
 		<!--changed content of question 5-->
@@ -166,10 +177,12 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<a href="#six" onclick="coldAdd();" class="w3-btn w3-black">No</a>
 	</div>
 </div>
-
+	
+<!--added coding for sixth question-->
 <div class="page" id="six">
 	<div class="w3-container w3-flat-carrot">
-		<h1>Question 6</h1> <!--change to #6-->
+		<!--change to #6-->
+		<h1>Question 6</h1>
 	</div>
 	<div id="content" class="w3-container">
 		<!--changed content of question 6-->
@@ -182,7 +195,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 <div class="page" id="results">
 	<div class="w3-container w3-flat-carrot">
-		<h1>Results</h1> <!--results page-->
+		<!--results page-->
+		<h1>Results</h1>
 	</div>
 	<div class="w3-container">
 		<!--show the results-->
