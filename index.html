@@ -30,15 +30,17 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<!--changed title-->
       <title>Cold or Allergy?</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
+		<!--make viewable on mobile-->		
       <meta name="apple-mobile-web-app-capable" content="yes">
       <link rel="stylesheet" href="w3.css">
       <link rel="stylesheet" href="w3-colors-flat.css">
 
-	  <style>	
+	  <style> /*how the layout appears to users*/
 .body {
      margin: 0em;
 }
 
+/*hides pages offscreen*/
 .page {
     width: 100vw;
     height: 100vh;
@@ -50,6 +52,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
     background-color: hsl(0,0%,100%);
 }
 
+/*brings page into view when clicked*/
   .page:target {
     left: 0vw;
     z-index: 1;
@@ -91,6 +94,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 
 <body>
+<!--homepage-->
 <div id="header" class="w3-container w3-flat-carrot">
 	<h1>Cold or Allergies?</h1>
 </div>
@@ -114,8 +118,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<!--changed question 1 content-->	
         <p>Are your eyes watery or itchy?</p>
 		<!--added yes or no button-->
-		<a href="#two" onclick="allergyAdd();" class="w3-btn w3-black">Yes</a>
-		<a href="#two" onclick="coldAdd();" class="w3-btn w3-black">No</a>
+		<a href="#two" onclick="allergyAdd();" class="w3-btn w3-black">Yes</a> <!--yes, so adds to allergyAdd()-->
+		<a href="#two" onclick="coldAdd();" class="w3-btn w3-black">No</a> <!--no, so adds to coldAdd()-->
     	</div>
 </div>
 
@@ -128,8 +132,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<!--changed content of question 2-->
 		<p>Do you have a fever?</p>
 		<!--added yes or no button-->
-		<a href="#three" onclick="coldAdd();" class="w3-btn w3-black">Yes</a>
-		<a href="#three" onclick="allergyAdd();" class="w3-btn w3-black">No</a>
+		<a href="#three" onclick="coldAdd();" class="w3-btn w3-black">Yes</a> <!--yes, so adds to coldAdd()-->
+		<a href="#three" onclick="allergyAdd();" class="w3-btn w3-black">No</a> <!--no, so adds to allergyAdd()-->
 		</div>
 </div>	
 
@@ -143,8 +147,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<!--changed content of question 3-->
 		<p>Do you have a sore throat?</p>
 		<!--added yes or no button-->
-		<a href="#four" onclick="coldAdd();" class="w3-btn w3-black">Yes</a>
-		<a href="#four" onclick="allergyAdd();" class="w3-btn w3-black">No</a>
+		<a href="#four" onclick="coldAdd();" class="w3-btn w3-black">Yes</a> <!--yes, so adds to coldAdd()-->
+		<a href="#four" onclick="allergyAdd();" class="w3-btn w3-black">No</a> <!--no, so adds to allergyAdd()-->
 	</div>
 </div>	
 
@@ -158,8 +162,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<!--changed content of question 4-->
 		<p>Are your symptoms seasonal or chronic?</p>
 		<!--added yes or no button-->
-		<a href="#five" onclick="allergyAdd();" class="w3-btn w3-black">Yes</a>
-		<a href="#five" onclick="coldAdd();" class="w3-btn w3-black">No</a>
+		<a href="#five" onclick="allergyAdd();" class="w3-btn w3-black">Yes</a> <!--yes, so adds to allergyAdd()-->
+		<a href="#five" onclick="coldAdd();" class="w3-btn w3-black">No</a> <!--no, so adds to coldAdd()-->
 	</div>
 </div>
 
@@ -173,8 +177,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<!--changed content of question 5-->
 		<p>Are your sneezes continuous?</p>
 		<!--added yes or no button-->
-		<a href="#six" onclick="allergyAdd();" class="w3-btn w3-black">Yes</a>
-		<a href="#six" onclick="coldAdd();" class="w3-btn w3-black">No</a>
+		<a href="#six" onclick="allergyAdd();" class="w3-btn w3-black">Yes</a> <!--yes, so adds to allergyAdd()-->
+		<a href="#six" onclick="coldAdd();" class="w3-btn w3-black">No</a> <!--no, so adds to coldAdd()-->
 	</div>
 </div>
 	
@@ -188,8 +192,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<!--changed content of question 6-->
 		<p>Is your body sore or tired?</p>
 		<!--added show results button-->
-		<a href="#results" onclick="coldAdd(); showResult();" class="w3-btn w3-black">Yes</a>
-		<a href="#results" onclick="allergyAdd(); showResult();" class="w3-btn w3-black">No</a>
+		<a href="#results" onclick="coldAdd(); showResult();" class="w3-btn w3-black">Yes</a> <!--yes, so adds to coldAdd(), as well as showResult()-->
+		<a href="#results" onclick="allergyAdd(); showResult();" class="w3-btn w3-black">No</a> <!--no, so adds to allergyAdd(), as well as showResult()-->
 	</div>
 </div>
 
@@ -204,7 +208,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div>
 </div>
 
-<footer class="w3-bottom w3-container w3-flat-carrot">
+<footer class="w3-bottom w3-container w3-flat-carrot"> <!--bottom of the page-->
 	<p>DIY!</p>
 </footer>
 
